@@ -13,11 +13,11 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
     let binarySnowflake = (convert(number));
 
     if (binarySnowflake.length < 64) { // Snowflake-to-date function.
-        n = 63 - binarySnowflake.length;
+        n = 64 - binarySnowflake.length;
         zero = "0";
         const sfbitSnowflake = (zero.repeat(n) + binarySnowflake); // Adds zeros as needed to format into 64-bit.
 
-        let binaryTimestamp = sfbitSnowflake.slice(0,41);
+        let binaryTimestamp = sfbitSnowflake.slice(0,42);
         const timestamp = ((parseInt(binaryTimestamp, 2)) + 1420070400000);
 
         var date = new Date(timestamp);
