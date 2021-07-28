@@ -17,9 +17,6 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
         zero = "0";
         const sfbitSnowflake = (zero.repeat(n) + binarySnowflake); // Adds zeros as needed to format into 64-bit.
 
-        console.log("This is a binary snowflake with added zeros: " + sfbitSnowflake);
-        console.log("Its length is: " + sfbitSnowflake.length);
-
         let binaryTimestamp = sfbitSnowflake.slice(0,41);
         const timestamp = ((parseInt(binaryTimestamp, 2)) + 1420070400000);
 
@@ -33,6 +30,5 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
 
         var date = new Date(timestamp);
         console.log(date.toString());
-
     };
 });
