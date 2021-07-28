@@ -31,4 +31,5 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
         var date = new Date(timestamp);
         console.log(date.toString());
     };
+    rl.close();
 });
