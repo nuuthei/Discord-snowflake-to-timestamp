@@ -24,7 +24,7 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
         console.log(date.toString());
 
     } else { // Will be a long time until this ever happens...
-        let binaryTimestamp = binarySnowflake.slice(0,41);
+        let binaryTimestamp = binarySnowflake.slice(0,42);
         
         const timestamp = ((parseInt(binaryTimestamp, 2)) + 1420070400000);
 
