@@ -18,9 +18,9 @@ rl.question("Insert snowflake ID: ", function(snowflake, number) {
         const sfbitSnowflake = (zero.repeat(n) + binarySnowflake); // Adds zeros as needed to format into 64-bit.
 
         let binaryTimestamp = sfbitSnowflake.slice(0,42);
-        const timestamp = ((parseInt(binaryTimestamp, 2)) + 1420070400000);
+        const timestamp = ((parseInt(binaryTimestamp, 2)) + 1420070400000); // Adds epoch
 
-        var date = new Date(timestamp);
+        var date = new Date(timestamp); // Get Unix time
         console.log(date.toString());
 
     } else { // Will be a long time until this ever happens...
